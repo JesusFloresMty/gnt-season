@@ -76,6 +76,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\JIFG\JIFG\DLLS\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -135,16 +139,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Back\GNTMDBTrophys.cs" />
     <Compile Include="Back\Logger.cs" />
     <Compile Include="Back\TrophyHelper.cs" />
     <Compile Include="Back\ValidacionJWT.cs" />
     <Compile Include="Controllers\CtasSeasonController.cs" />
     <Compile Include="Controllers\RewardController.cs" />
     <Compile Include="Controllers\SeasonController.cs" />
+    <Compile Include="Controllers\SeasonTrophysController.cs" />
     <Compile Include="Controllers\TrophyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CRUD_gnt_seasons_trophys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,7 +169,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
